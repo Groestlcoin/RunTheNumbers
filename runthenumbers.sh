@@ -5,10 +5,10 @@ USERNAME="RPC_USERNAME"
 PASSWORD="RPC_PASSWORD"
 
 IP_ADDRESS="127.0.0.1"
-PORT="8332"
+PORT="1441"
 
 # This is the block height we're waiting for
-TARGET_BLOCK="650000"
+TARGET_BLOCK="3231500"
 
 OUTPUT_FILE="the_numbers_${TARGET_BLOCK}.txt"
 
@@ -20,7 +20,7 @@ while true
 do
     # Check that USERNAME and PASSWORD are filled in
     if [ $USERNAME = "RPC_USERNAME" ] || [ $PASSWORD = "RPC_PASSWORD" ]; then
-        echo "first you need to update the username and password located in the script header to match those in your bitcoin.conf file"
+        echo "first you need to update the username and password located in the script header to match those in your groestlcoin.conf file"
         exit
     fi
 

@@ -1,10 +1,10 @@
 #!/bin/bash
 
 IP_ADDRESS="127.0.0.1"
-PORT="8332"
+PORT="1441"
 
 # This is the block height we're waiting for
-TARGET_BLOCK="650000"
+TARGET_BLOCK="3231500"
 
 OUTPUT_FILE="the_numbers_${TARGET_BLOCK}.txt"
 
@@ -16,12 +16,12 @@ while true
 do
 
     # This fetches the current block height from your full node.
-    CURRENT_BLOCK=$(bitcoin-cli getblockcount)
+    CURRENT_BLOCK=$(groestlcoin-cli getblockcount)
 
     # If the block height matches, call gettxoutsetinfo and print to file
     if [ $CURRENT_BLOCK = $TARGET_BLOCK ]; then
         echo "$CURRENT_BLOCK/$TARGET_BLOCK: running the numbers...";
-        TXOUTSETINFO=$(bitcoin-cli gettxoutsetinfo)
+        TXOUTSETINFO=$(groestlcoin-cli gettxoutsetinfo)
         echo
         echo
         echo "${TXOUTSETINFO}"
