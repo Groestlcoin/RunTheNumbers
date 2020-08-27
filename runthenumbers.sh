@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# You need to replace 'RPC_USERNAME' and 'RPC_PASSWORD' with the username and password in your bitcoin.conf file
+# You need to replace 'RPC_USERNAME' and 'RPC_PASSWORD' with the username and password in your groestlcoin.conf file
 USERNAME="RPC_USERNAME"
 PASSWORD="RPC_PASSWORD"
 
